@@ -4,10 +4,10 @@
 #
 Name     : perl-Apache-LogFormat-Compiler
 Version  : 0.36
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
-Summary  : Perl module to compile apache log format string to Perl code
+Summary  : 'Compile a log format string to perl-code '
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Apache-LogFormat-Compiler-perl = %{version}-%{release}
@@ -25,7 +25,6 @@ BuildRequires : perl(Module::Build::Tiny)
 Summary: dev components for the perl-Apache-LogFormat-Compiler package.
 Group: Development
 Provides: perl-Apache-LogFormat-Compiler-devel = %{version}-%{release}
-Requires: perl-Apache-LogFormat-Compiler = %{version}-%{release}
 Requires: perl-Apache-LogFormat-Compiler = %{version}-%{release}
 
 %description dev
@@ -79,4 +78,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Apache/LogFormat/Compiler.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Apache/LogFormat/Compiler.pm
