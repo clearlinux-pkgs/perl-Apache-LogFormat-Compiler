@@ -4,12 +4,13 @@
 #
 Name     : perl-Apache-LogFormat-Compiler
 Version  : 0.36
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Summary  : 'Compile a log format string to perl-code '
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Apache-LogFormat-Compiler-license = %{version}-%{release}
 Requires: perl-Apache-LogFormat-Compiler-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(ExtUtils::Config)
@@ -29,6 +30,14 @@ Requires: perl-Apache-LogFormat-Compiler = %{version}-%{release}
 
 %description dev
 dev components for the perl-Apache-LogFormat-Compiler package.
+
+
+%package license
+Summary: license components for the perl-Apache-LogFormat-Compiler package.
+Group: Default
+
+%description license
+license components for the perl-Apache-LogFormat-Compiler package.
 
 
 %package perl
@@ -59,6 +68,8 @@ fi
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Apache-LogFormat-Compiler
+cp %{_builddir}/Apache-LogFormat-Compiler-0.36/LICENSE %{buildroot}/usr/share/package-licenses/perl-Apache-LogFormat-Compiler/2c39d05eff7565e4bd58a83e6173e2419ef30aeb
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -76,6 +87,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/Apache::LogFormat::Compiler.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Apache-LogFormat-Compiler/2c39d05eff7565e4bd58a83e6173e2419ef30aeb
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Apache/LogFormat/Compiler.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Apache/LogFormat/Compiler.pm
