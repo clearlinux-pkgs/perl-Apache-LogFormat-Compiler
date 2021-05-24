@@ -4,7 +4,7 @@
 #
 Name     : perl-Apache-LogFormat-Compiler
 Version  : 0.36
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Summary  : 'Compile a log format string to perl-code '
