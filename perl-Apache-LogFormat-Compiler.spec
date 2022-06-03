@@ -4,7 +4,7 @@
 #
 Name     : perl-Apache-LogFormat-Compiler
 Version  : 0.36
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.36.tar.gz
 Summary  : 'Compile a log format string to perl-code '
@@ -93,4 +93,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Apache/LogFormat/Compiler.pm
+/usr/lib/perl5/*
